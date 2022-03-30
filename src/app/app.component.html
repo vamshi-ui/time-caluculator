@@ -1,0 +1,18 @@
+<input type="date" (change)="onChange($event)" />
+<div class="wrapper">
+  <p class="targe-date">
+    Countdown to {{ months[month] + " " + day + ", " + year }}
+  </p>
+  <div class="description">
+    <p>Days</p>
+    <p>Hours</p>
+    <p>Minutes</p>
+    <p>Seconds</p>
+  </div>
+  <div class="times">
+    <p id="days" #days></p>
+    <p id="hours" #hours></p>
+    <p id="mins" #mins></p>
+    <p id="seconds" #seconds></p>
+  </div>
+</div>
