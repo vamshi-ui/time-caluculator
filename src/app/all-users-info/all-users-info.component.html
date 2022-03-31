@@ -1,0 +1,24 @@
+<pre>
+  ✨✨ {{ userOcassionDate?.userName }} {{
+    userOcassionDate?.ocassion
+  }} span  till date {{ dateDiff(userOcassionDate?.date) }} ✨✨
+</pre>
+<pre>
+  ✨✨ Countdown to {{ userOcassionDate?.userName }} {{
+    userOcassionDate?.ocassion
+  }} ✨✨
+</pre>
+<div class="wrapper">
+  <div class="description">
+    <p>Days</p>
+    <p>Hours</p>
+    <p>Minutes</p>
+    <p>Seconds</p>
+  </div>
+  <div class="times">
+    <p id="days" #days></p>
+    <p id="hours" #hours></p>
+    <p id="mins" #mins></p>
+    <p id="seconds" #seconds></p>
+  </div>
+</div>

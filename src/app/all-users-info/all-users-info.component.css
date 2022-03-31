@@ -1,9 +1,11 @@
 .wrapper {
-  max-width: 300px;
+  width: 100%;
   margin: 0 auto;
   font: normal 14px sans-serif;
+  color: red;
+  font-weight: bold;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
-
 .targe-date {
   text-align: center;
 }
@@ -15,8 +17,10 @@
   font-size: 22px;
 }
 p {
-  width: 25%;
-
+  width: 70px;
   margin: 10px 0 0 0;
   text-align: center;
+}
+pre {
+  font-weight: bold;
 }

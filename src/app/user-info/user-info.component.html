@@ -1,0 +1,48 @@
+<header>
+  <h2><a href="#">Life is a party!</a></h2>
+  <nav>
+    <li><a routerLink="user-info">Plan Ocassion</a></li>
+    <li><a routerLink="">About</a></li>
+    <li><a routerLink="/my-info">My Info</a></li>
+  </nav>
+</header>
+<body>
+  <div id="bg"></div>
+  <form [formGroup]="submitForm">
+    <h1>Enter Your Details</h1>
+    <div class="form-field">
+      <input
+        type="text"
+        formControlName="userName"
+        placeholder="Username"
+        required
+      />
+    </div>
+
+    <div class="form-field">
+      <input
+        type="text"
+        formControlName="ocassion"
+        placeholder="Ocassion"
+        required
+      />
+    </div>
+
+    <div class="form-field">
+      <input type="date" formControlName="date" />
+    </div>
+
+    <div class="form-field">
+      <button
+        [disabled]="submitForm.invalid"
+        [ngClass]="{ 'disable-btn': submitForm.invalid }"
+        class="btn"
+        type="submit"
+        (click)="submit()"
+        required
+      >
+        Proceed
+      </button>
+    </div>
+  </form>
+</body>

@@ -1,0 +1,17 @@
+<nav class="stroke">
+  <ul>
+    <li><a routerLink="/user-info">Plan Ocassion</a></li>
+    <li><a routerLink="">About</a></li>
+    <li><a routerLink="my-info">My Info</a></li>
+  </ul>
+</nav>
+<div class="d-flex">
+  <ng-container *ngFor="let data of userInfo">
+    <app-all-users-info
+      class="card"
+      [userOcassionDate]="data"
+      (click)="goToTimer(data.id)"
+    >
+    </app-all-users-info>
+  </ng-container>
+</div>
