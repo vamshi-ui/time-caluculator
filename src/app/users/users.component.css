@@ -73,6 +73,6 @@ nav.stroke ul li a:hover:after {
     rgba(63, 63, 63, 0.8) 0%,
     rgba(255, 255, 255, 0) 55%
   );
-
+  cursor: pointer;
   border-radius: 5px;
 }
