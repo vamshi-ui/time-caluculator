@@ -17,7 +17,7 @@ export class AllUsersInfoComponent implements OnInit, OnChanges {
   @ViewChild('hours') hoursDiv!: ElementRef;
   @ViewChild('mins') minsDiv!: ElementRef;
   @ViewChild('seconds') secDiv!: ElementRef;
-
+  isUserOcassion = false;
   title = 'timecalculator';
   currentDate: any;
   targetDate: any;
@@ -89,6 +89,18 @@ export class AllUsersInfoComponent implements OnInit, OnChanges {
       const splittedData = data.split('-');
       splittedData[0] = new Date().getFullYear();
       date = splittedData.join('-');
+    } else if (new Date(data).getMonth() == new Date().getMonth()) {
+      if (new Date(data).getDate() == new Date().getDate()) {
+        this.isUserOcassion = true;
+      } else if (new Date(data).getDate() > new Date().getDate()) {
+        const splittedData = data.split('-');
+        splittedData[0] = new Date().getFullYear();
+        date = splittedData.join('-');
+      } else {
+        const splittedData = data.split('-');
+        splittedData[0] = new Date().getFullYear() + 1;
+        date = splittedData.join('-');
+      }
     } else {
       const splittedData = data.split('-');
       splittedData[0] = new Date().getFullYear() + 1;

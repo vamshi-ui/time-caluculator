@@ -20,16 +20,19 @@
     </div>
 
     <div class="form-field">
-      <input
-        type="text"
-        formControlName="ocassion"
-        placeholder="Ocassion"
-        required
-      />
+      <select formControlName="ocassion">
+        <option selected value="">Select Ocassion</option>
+        <option value="Birth Day">Birth Day</option>
+        <option value="Wedding Anniversary">Wedding Anniversary</option>
+        <option value="Work Anniversary">Work Anniversary</option>
+        <option value="New Year">New Year</option>
+        <option value="Holiday/Vacation">Holiday/Vacation</option>
+        <option value="Memorial Day">Memorial Day</option>
+      </select>
     </div>
 
     <div class="form-field">
-      <input type="date" formControlName="date" />
+      <input type="date" formControlName="date" [max]="todaysDate" />
     </div>
 
     <div class="form-field">

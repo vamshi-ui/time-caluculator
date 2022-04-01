@@ -1,196 +1,366 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.txt-center{
-    text-align: center;
-    font-weight: bold;
-    
+.txt-center {
+  text-align: center;
+  font-weight: bold;
 }
 body {
-    height: 100vh;
-    background: radial-gradient(50% 50% at 50% 50%, #396AFC 0%, #2948FF 100%);
-    font-family: 'Baloo Tamma 2', cursive;
-    color: white;
-}
-
-h1 {
-    font-size: 5rem;
-    padding: 1rem;
+  /* height: 100vh;
+    background: radial-gradient(50% 50% at 50% 50%, #396AFC 0%, #2948FF 100%); */
+  font-family: "Baloo Tamma 2", cursive;
+  color: white;
 }
 
 .container {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+  min-height: 100vh;
+  z-index: 11111;
+  display: flex;
+  color: white;
+  font-weight: bold;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .countdown {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
 }
 
 .hour,
 .minutes,
 .seconds {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 .miliSeconds {
-    padding-top: 1.5rem;
-    font-size: 2rem;
+  padding-top: 1.5rem;
+  font-size: 2rem;
 }
 
 .imge {
-    padding-top: 2rem;
+  padding-top: 2rem;
 }
 
 .deamonFace {
-    position: absolute;
-    left: 5%;
-    top: 40%;
-    animation: deamon 1.5s ease-in-out infinite alternate-reverse;
+  position: absolute;
+  left: 5%;
+  top: 40%;
+  animation: deamon 1.5s ease-in-out infinite alternate-reverse;
 }
 
 .deamonFace2 {
-    position: absolute;
-    top: 40%;
-    left: 85%;
-    animation: deamon 1.5s ease-in-out infinite alternate;
+  position: absolute;
+  top: 40%;
+  left: 85%;
+  animation: deamon 1.5s ease-in-out infinite alternate;
 }
 
 #EyeBros {
-    animation: eyebros 1s ease-in-out infinite alternate;
+  animation: eyebros 1s ease-in-out infinite alternate;
 }
 
 @keyframes eyebros {
-    from {
-        transform: rotateX(0deg);
-    }
-    to {
-        transform: rotateX(20deg);
-    }
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(20deg);
+  }
 }
 
 @keyframes deamon {
-    0% {
-        top: 20%;
-    }
-    100% {
-        top: 60%;
-    }
+  0% {
+    top: 20%;
+  }
+  100% {
+    top: 60%;
+  }
 }
 
 .animation-bg div {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-color: transparent;
-    border: 6px solid white;
-    border-radius: 50%;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 6px solid white;
+  border-radius: 50%;
 }
 
 .animation-bg div:nth-child(1) {
-    top: 12%;
-    left: 42%;
-    z-index: 111;
-    animation: animate 10s linear infinite;
+  top: 12%;
+  left: 42%;
+  z-index: 111;
+  animation: animate 10s linear infinite;
 }
 
 .animation-bg div:nth-child(2) {
-    top: 70%;
-    left: 50%;
-    z-index: 111;
-    animation: animate 7s linear infinite;
+  top: 70%;
+  left: 50%;
+  z-index: 111;
+  animation: animate 7s linear infinite;
 }
 
 .animation-bg div:nth-child(3) {
-    top: 17%;
-    left: 6%;
-    z-index: 111;
-    animation: animate 9s linear infinite;
+  top: 17%;
+  left: 6%;
+  z-index: 111;
+  animation: animate 9s linear infinite;
 }
 
 .animation-bg div:nth-child(4) {
-    top: 20%;
-    left: 60%;
-    z-index: 111;
-    animation: animate 7s linear infinite;
+  top: 20%;
+  left: 60%;
+  z-index: 111;
+  animation: animate 7s linear infinite;
 }
 
 .animation-bg div:nth-child(5) {
-    top: 67%;
-    left: 10%;
-    z-index: 111;
-    animation: animate 6s linear infinite;
+  top: 67%;
+  left: 10%;
+  z-index: 111;
+  animation: animate 6s linear infinite;
 }
 
 .animation-bg div:nth-child(6) {
-    top: 80%;
-    left: 70%;
-    z-index: 111;
-    animation: animate 14s linear infinite;
+  top: 80%;
+  left: 70%;
+  z-index: 111;
+  animation: animate 14s linear infinite;
 }
 
 .animation-bg div:nth-child(7) {
-    top: 30%;
-    left: 50%;
-    z-index: 111;
-    animation: animate 12s linear infinite;
+  top: 30%;
+  left: 50%;
+  z-index: 111;
+  animation: animate 12s linear infinite;
 }
 
 .animation-bg div:nth-child(8) {
-    top: 35%;
-    left: 80%;
-    z-index: 111;
-    animation: animate 10s linear infinite;
+  top: 35%;
+  left: 80%;
+  z-index: 111;
+  animation: animate 10s linear infinite;
 }
 
 .animation-bg div:nth-child(9) {
-    top: 85%;
-    left: 20%;
-    z-index: 111;
-    animation: animate 7s linear infinite;
+  top: 85%;
+  left: 20%;
+  z-index: 111;
+  animation: animate 7s linear infinite;
 }
 
 .animation-bg div:nth-child(10) {
-    top: 85%;
-    left: 85%;
-    z-index: 111;
-    animation: animate 8s linear infinite;
+  top: 85%;
+  left: 85%;
+  z-index: 111;
+  animation: animate 8s linear infinite;
 }
 
 .animation-bg div:nth-child(11) {
-    top: 40%;
-    left: 25%;
-    z-index: 32323;
-    animation: animate 5s linear infinite;
+  top: 40%;
+  left: 25%;
+  z-index: 32323;
+  animation: animate 5s linear infinite;
 }
 
 @keyframes animate {
-    0% {
-        transform: scale(0) translateY(0) rotate(0);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1.3) translateY(-90px) rotate(360deg);
-        opacity: 0;
-    }
+  0% {
+    transform: scale(0) translateY(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.3) translateY(-90px) rotate(360deg);
+    opacity: 0;
+  }
+}
+.button-three {
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
 }
 
+/*Button Three*/
+.button-three {
+  position: relative;
+  background-color: #f39c12;
+  border: none;
+  padding: 15px 10px;
+  width: 150px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 2px;
+  font-weight: 700;
+}
 
+.button-three:hover {
+  background: #fff;
+  box-shadow: 0px 2px 10px 5px #97b1bf;
+  color: #000;
+}
 
+.button-three:after {
+  content: "";
+  background: #f1c40f;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
 
+.button-three:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
 
+.bd-opacity {
+  position: relative;
+  background-color: #000;
+}
 
+.bd-opacity::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.3;
+  background-size: cover;
+  background: url("https://images.unsplash.com/photo-1533294160622-d5fece3e080d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")
+    no-repeat center center;
+}
 
+.bd-opacity {
+  position: relative;
+  background-color: #000;
+}
 
+.bd-opacity::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.3;
+  background-size: cover;
+}
 
+.wd-opacity {
+  position: relative;
+  background-color: #000;
+}
 
+.wd-opacity::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.3;
+  background-size: cover;
+  background: url("https://wallpaperaccess.com/full/2340884.jpg") no-repeat
+    center center;
+}
 
+.wk-opacity {
+  position: relative;
+  background-color: #000;
+}
 
+.wk-opacity::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.3;
+  background: url("https://us.123rf.com/450wm/jongcreative/jongcreative2006/jongcreative200602150/148853472-colorful-brightly-beautiful-fireworks-abstract-background-vector-illustration.jpg?ver=6")
+    no-repeat center center;
+  background-size: cover;
+}
+
+.nw-opacity {
+  position: relative;
+  background-color: #000;
+}
+
+.nw-opacity::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.3;
+  background-size: cover;
+  background: url("https://www.pixelstalk.net/wp-content/uploads/images6/Happy-new-year-background.jpg")
+    no-repeat center center;
+}
+
+.hd-opacity {
+  position: relative;
+  background-color: #000;
+}
+
+.hd-opacity::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: url("https://thumbs.dreamstime.com/b/beach-background-beautiful-beach-landscape-tropical-nature-scene-palm-trees-blue-sky-summer-holiday-vacation-concept-93725354.jpg")
+    no-repeat center center;
+  opacity: 0.3;
+  background-size: cover;
+}
+
+.md-opacity {
+  position: relative;
+  background-color: #000;
+}
+
+.md-opacity::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.3;
+  background: url("https://wallpapercave.com/wp/POWrCQJ.jpg") no-repeat center
+    center;
+  background-size: cover;
+}

@@ -1,48 +1,62 @@
-<body>
+<body [ngClass]="bgImage()">
   <section class="container">
-    <marquee>
-      <span
-        >✨✨ {{ userOcassionDate?.userName }}
-        {{ userOcassionDate?.ocassion }} span till date
-        {{ dateDiff(userOcassionDate?.date) }} ✨✨</span
-      >
-    </marquee>
-    <div>
-      <h2 class="txt-center">Coming Soon 👀✨</h2>
-      <h3 class="txt-center">
-        ✨✨ Countdown to {{ userOcassionDate?.userName }}
-        {{ userOcassionDate?.ocassion }} ✨✨
-      </h3>
-      <p class="txt-center">
-        Time Decreases Excitement Increases for the Most special Day 😌
-      </p>
-      <div class="countdown">
-        <div class="container-hour">
-          <h2 class="hour" #days></h2>
-          <h2>Days</h2>
-        </div>
+    <ng-container *ngIf="!isUserOcassion; else isOcassion">
+      <marquee>
+        <span>
+          ✨✨ {{ userOcassionDate?.userName }} it's been
+          {{ dateDiff(userOcassionDate?.date) }} of ur's
+          {{ userOcassionDate?.ocassion }} till date✨✨</span
+        >
+      </marquee>
+      <div>
+        <h2 class="txt-center">Coming Soon 👀✨</h2>
+        <h3 class="txt-center">
+          ✨✨ Countdown to {{ userOcassionDate?.userName }}
+          {{ userOcassionDate?.ocassion }} ✨✨
+        </h3>
+        <p class="txt-center">
+          Time Decreases Excitement Increases for the Most special Day 😌
+        </p>
+        <div class="countdown">
+          <div class="container-hour">
+            <h2 class="hour" #days></h2>
+            <h2>Days</h2>
+          </div>
 
-        <div class="container-hour">
-          <h2 class="hour" #hours></h2>
-          <h2>Hours</h2>
-        </div>
-        <div class="container-minutes">
-          <h2 class="minutes" #mins></h2>
-          <h2>Minutes</h2>
-        </div>
-        <div class="container-seconds">
-          <h2 class="seconds" #seconds></h2>
-          <h2>Seconds</h2>
+          <div class="container-hour">
+            <h2 class="hour" #hours></h2>
+            <h2>Hours</h2>
+          </div>
+          <div class="container-minutes">
+            <h2 class="minutes" #mins></h2>
+            <h2>Minutes</h2>
+          </div>
+          <div class="container-seconds">
+            <h2 class="seconds" #seconds></h2>
+            <h2>Seconds</h2>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="imge">
-      <img
-        width="300px"
-        height="300px"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdNtkG1lOxeqqKiZH8uh-D_dtcXn926NutvJecRrhoQBV53zn2MDuhBU0KQKDeT8jXX1Y&usqp=CAU"
-      />
-    </div>
+    </ng-container>
+    <ng-template #isOcassion>
+      <marquee>
+        <span
+          >✨✨ {{ userOcassionDate?.userName }}
+          {{ userOcassionDate?.ocassion }} span till date
+          {{ dateDiff(userOcassionDate?.date) }} ✨✨</span
+        >
+      </marquee>
+      <h2 class="txt-center">
+        Wohoo it's your {{ userOcassionDate?.ocassion }} today 👀✨
+      </h2>
+      <h3 class="txt-center">
+        ✨✨ The wait is over {{ userOcassionDate?.userName }} enjoy your
+        {{ userOcassionDate?.ocassion }} ✨✨
+      </h3>
+      <h3 class="txt-center">✨✨ God Bless You ✨✨</h3>
+    </ng-template>
+    <br />
+    <button class="button-three" routerLink="">Back to Home</button>
   </section>
 
   <div class="deamonFace">

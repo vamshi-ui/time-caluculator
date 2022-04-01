@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class UserInfoComponent implements OnInit {
   submitForm!: FormGroup;
+  todaysDate = new Date().toISOString().split('T')[0];
   constructor(private fb: FormBuilder, private router: Router) {
     this.submitForm = this.fb.group({
       userName: ['', Validators.required],

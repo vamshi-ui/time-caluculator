@@ -11,7 +11,7 @@ export class TimerPageComponent implements OnInit {
   @ViewChild('hours') hoursDiv!: ElementRef;
   @ViewChild('mins') minsDiv!: ElementRef;
   @ViewChild('seconds') secDiv!: ElementRef;
-
+  isUserOcassion = false;
   title = 'timecalculator';
   currentDate: any;
   targetDate: any;
@@ -90,6 +90,18 @@ export class TimerPageComponent implements OnInit {
       const splittedData = data.split('-');
       splittedData[0] = new Date().getFullYear();
       date = splittedData.join('-');
+    } else if (new Date(data).getMonth() == new Date().getMonth()) {
+      if (new Date(data).getDate() == new Date().getDate()) {
+        this.isUserOcassion = true;
+      } else if (new Date(data).getDate() > new Date().getDate()) {
+        const splittedData = data.split('-');
+        splittedData[0] = new Date().getFullYear();
+        date = splittedData.join('-');
+      } else {
+        const splittedData = data.split('-');
+        splittedData[0] = new Date().getFullYear() + 1;
+        date = splittedData.join('-');
+      }
     } else {
       const splittedData = data.split('-');
       splittedData[0] = new Date().getFullYear() + 1;
@@ -138,5 +150,28 @@ export class TimerPageComponent implements OnInit {
     }
 
     return yearDiff + 'Years ' + monthDiff + 'Months ' + dayDiff + 'Days';
+  }
+
+  bgImage(): any {
+    switch (this.userOcassionDate.ocassion) {
+      case 'Birth Day': {
+        return 'bd-opacity';
+      }
+      case 'Wedding Anniversary': {
+        return 'wd-opacity';
+      }
+      case 'Work Anniversary': {
+        return 'wk-opacity';
+      }
+      case 'New Year': {
+        return 'nw-opacity';
+      }
+      case 'Holiday/Vacation': {
+        return 'hd-opacity';
+      }
+      case 'Memorial Day': {
+        return 'md-opacity';
+      }
+    }
   }
 }
