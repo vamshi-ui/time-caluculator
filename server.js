@@ -6,7 +6,7 @@ const app = express();
 app.use(express.static("./dist/timecalculator"));
 
 app.get("/*", (req, res) =>
-  res.sendFile("index.html", { root: "dist/timecalculator" })
+  res.sendFile("index.html", { root: "dist/timecalculator/" })
 );
 
 app.listen(process.env.PORT || 8080);
